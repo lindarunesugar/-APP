@@ -12,7 +12,7 @@
         <!--君の本命は......どんな人？-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="擇偶APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TrueLoveViewController" customModule="擇偶APP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -82,10 +82,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SD-uF-5eH">
+                                <rect key="frame" x="136" y="407" width="62" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="送出">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MV9-i5-UQZ"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AxM-QR-RGX">
+                                <rect key="frame" x="35" y="446" width="178" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2X7-l1-RZS">
+                                <rect key="frame" x="35" y="446" width="178" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="君の本命は......どんな人？" id="50H-gg-Abu"/>
+                    <connections>
+                        <outlet property="ABO" destination="liG-T8-hat" id="WYC-eN-Fpi"/>
+                        <outlet property="age" destination="MeU-Uj-Xaa" id="3yD-78-znT"/>
+                        <outlet property="gender" destination="YlJ-YX-6ea" id="hED-mo-NGf"/>
+                        <outlet property="no" destination="2X7-l1-RZS" id="QVt-2V-L8C"/>
+                        <outlet property="star" destination="a7y-sX-1hd" id="HKn-4m-ubj"/>
+                        <outlet property="yes" destination="AxM-QR-RGX" id="rEu-UP-MnS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +138,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NO" width="246" height="234"/>
+        <image name="YES" width="234" height="225"/>
         <image name="background-taki" width="750" height="1344"/>
     </resources>
 </document>
